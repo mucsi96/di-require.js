@@ -1,0 +1,20 @@
+{
+  "name": "di-require-example",
+  "version": "0.0.0",
+  "description": "",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+    "devDependencies": {
+        "grunt-contrib-jasmine": "~0.6.1",
+        "grunt-jslint": "~1.1.1",
+        "grunt-contrib-watch": "~0.5.3",
+        "grunt-jsdoc": "~0.4.2",
+        "karma": "~0.10",
+        "karma-jasmine": "~0.2.1",
+        "grunt-exec": "~0.4.5"
+    }
+}
