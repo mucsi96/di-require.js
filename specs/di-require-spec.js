@@ -37,16 +37,16 @@ describe('DI require module', function () {
                 define('alphaModule', alphaModule);
             }());
             (function () {
-                var betaModule = function () {
+                var bravoModule = function () {
                     var alphaModule = require('alphaModule');
                     return {
                         getName: function () {
-                            return alphaModule.getName() + 'Beta';
+                            return alphaModule.getName() + 'Bravo';
                         }
                     };
                 };
 
-                define('betaModule', betaModule);
+                define('bravoModule', bravoModule);
             }());
         });
 
@@ -61,12 +61,12 @@ describe('DI require module', function () {
                 stub('alphaModule', alphaModuleStub);
             });
             describe('WHEN "test" is called with the main module THEN', function () {
-                var betaModule;
+                var bravoModule;
                 beforeEach(function () {
-                    betaModule = test('betaModule');
+                    bravoModule = test('bravoModule');
                 });
                 it('should stub out the dependent module', function () {
-                    expect(betaModule.getName()).toEqual('stubAlphaBeta');
+                    expect(bravoModule.getName()).toEqual('stubAlphaBravo');
                 });
             });
         });

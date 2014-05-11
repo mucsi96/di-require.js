@@ -16,20 +16,20 @@ Let's define a module
 And one more module
 
     (function () {
-    var betaModule = function () {
+    var bravoModule = function () {
         var alphaModule = require('alphaModule');
         return {
             getName: function () {
-                return alphaModule.getName() + 'Beta';
+                return alphaModule.getName() + 'Bravo';
             }
         };
     };
-    define('betaModule', betaModule);
+    define('bravoModule', bravoModule);
     }());
 
 And now we can easily test it!
 
-    describe('betaModule', function () {  
+    describe('bravoModule', function () {
         it('should be easily tested', function () {
             var alphaModuleStub = {
                 getName: function () {
@@ -38,8 +38,8 @@ And now we can easily test it!
             };
     
             stub('alphaModule', alphaModuleStub);
-            betaModule = test('betaModule');
-            expect(betaModule.getName()).toEqual('stubAlphaBeta');
+            bravoModule = test('bravoModule');
+            expect(bravoModule.getName()).toEqual('stubAlphaBravo');
         });  
     });
 
