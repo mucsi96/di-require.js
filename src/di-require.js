@@ -26,9 +26,6 @@
     }
 
     function test(moduleName) {
-        Object.keys(modules).forEach(function (moduleName) {
-            modules[moduleName].instance = undefined;
-        });
         testMode = true;
         return modules[moduleName].constructor();
     }
